@@ -22,7 +22,7 @@ export default function Home() {
           Stop Overpaying<br />for <span style={{ color: '#d4a853' }}>AI Tools.</span>
         </h1>
         <p style={{ fontSize: '20px', color: '#737373', lineHeight: 1.6, marginBottom: '48px', maxWidth: '560px', margin: '0 auto 48px' }}>
-          Get an instant audit of your AI stack. See exactly where you're overspending and how much you could save — free, no login required.
+          Get an instant audit of your AI stack. See exactly where you&apos;re overspending and how much you could save — free, no login required.
         </p>
         <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '24px' }}>
           <Link href="/audit" style={{ padding: '16px 32px', backgroundColor: '#d4a853', color: '#0a0a0a', borderRadius: '10px', textDecoration: 'none', fontSize: '16px', fontWeight: 700, letterSpacing: '-0.3px' }}>
@@ -32,7 +32,7 @@ export default function Home() {
             See Sample Report
           </Link>
         </div>
-        <p style={{ fontSize: '13px', color: '#404040' }}>Join 500+ startups who've audited their AI spend</p>
+        <p style={{ fontSize: '13px', color: '#404040' }}>Join 500+ startups who&apos;ve audited their AI spend</p>
       </section>
 
       {/* Stats */}

@@ -51,13 +51,20 @@ export default function AuditForm() {
 
   useEffect(() => {
     const saved = localStorage.getItem('spendlens_form');
-    if (saved) {
+    if (!saved) return;
+    try {
       const parsed = JSON.parse(saved);
-      if (parsed.entries) setEntries(parsed.entries);
-      if (parsed.teamSize) setTeamSize(parsed.teamSize);
-      if (parsed.useCase) setUseCase(parsed.useCase);
-    }
-  }, []);
+      if (parsed.entries) {
+        setEntries(parsed.entries); // eslint-disable-line react-hooks/set-state-in-effect
+      }
+      if (parsed.teamSize) {
+        setTeamSize(parsed.teamSize); // eslint-disable-line react-hooks/set-state-in-effect
+      }
+      if (parsed.useCase) {
+        setUseCase(parsed.useCase); // eslint-disable-line react-hooks/set-state-in-effect
+      }
+    } catch {}
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const save = (newEntries: ToolEntry[], ts: number, uc: string) => {
     localStorage.setItem('spendlens_form', JSON.stringify({ entries: newEntries, teamSize: ts, useCase: uc }));

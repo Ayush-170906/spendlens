@@ -30,7 +30,7 @@ Write a friendly, specific, actionable 100-word summary. Be direct about the sav
     const result = await model.generateContent(prompt);
     const response = await result.response;
     return response.text();
-  } catch (error) {
+  } catch {
     // Fallback if API fails
     const { totalMonthlySavings, totalAnnualSavings } = auditResult;
     if (totalMonthlySavings === 0) {
